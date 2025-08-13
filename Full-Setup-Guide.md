@@ -51,3 +51,20 @@ o DNS: 192.168.56.10 (pointing to DC)
 • To set up RDP on client VM: enable Remote Desktop and allow through firewall. On DC, open Remote Desktop Connection and connect to client IP or name. Login with domain user credentials (anthony\administrator).
 ![RDP1](Images/RDP1.png)
 ![RDP2](Images/RDP2.png)
+
+
+
+
+Troubleshooting Notes
+
+-Initially, the Windows Server VM’s IP was 10.0.2.15 instead of the intended static IP 192.168.56.10. This was due to the VirtualBox network adapter being set to NAT. Switching the adapter to Host-only Adapter or Internal Network fixed this.
+
+-I got locked out of the Domain Controller login because I forgot the Administrator password. I reset the VM to a previous snapshot, logged in as the local user vboxuser created by VirtualBox, and then reset the Administrator password using the command net user Administrator Anthony123.
+
+-Since the server is a Domain Controller, there’s no separate local Administrator account; resetting the password this way also reset the domain admin password. This allowed me to log in as anthony\Administrator with the new password.
+
+-I initially forgot to create an Organizational Unit (OU) for the client computer. After linking the client to the domain, I created a new OU named Clients and moved the client computer object there. I then linked the Group Policy Object (GPO) to this OU.
+
+-When setting the wallpaper via GPO, the client did not receive the policy initially. I realized I had not set proper sharing permissions on the parent Shared folder. After adjusting the NTFS and share permissions on Shared\Wallpaper, the policy applied successfully.
+
+-One limitation: the client’s desktop wallpaper cannot be changed visibly because Windows isn’t activated on the client VM, but the GPO policy is applied as confirmed by gpresult.
