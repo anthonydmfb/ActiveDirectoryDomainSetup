@@ -1,6 +1,7 @@
 Active Directory Domain Setup with Group Policy Management
 
 Project Overview
+
 This project demonstrates the setup and configuration of a Windows Server 2022 Active Directory environment in VirtualBox, complete with a domain controller, a Windows 11 Pro client, shared network resources, and centralized management through Group Policy. I configured the server with a static IP, installed the Active Directory Domain Services (AD DS) role, and promoted it to a domain controller for the anthony.local domain. I created organizational units (OUs) to organize users and computers, added a test domain user, and joined the Windows 11 client to the domain. A shared folder containing a wallpaper image was created on the server and made accessible over the network using advanced sharing and NTFS permissions. I then implemented a Group Policy Object (GPO) to set a domain-wide desktop wallpaper, ensuring clients could access the shared file. Finally, I enabled Remote Desktop Protocol (RDP) access from the domain controller to the client, completing a fully functional, networked Active Directory lab environment.
 
 Skills & Technologies Used
