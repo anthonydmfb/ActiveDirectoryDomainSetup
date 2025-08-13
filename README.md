@@ -6,13 +6,20 @@ This project demonstrates the setup and configuration of a Windows Server 2022 A
 
 Skills & Technologies Used
 
-Active Directory
-Group Policy Management
-Windows Server 2022
-Windows 11 Pro Client
-VirtualBox Networking
-NTFS Permissions & Sharing
-Remote Desktop Protocol (RDP)
+-Active Directory
+
+-Group Policy Management
+
+-Windows Server 2022
+
+-Windows 11 Pro Client
+
+-VirtualBox Networking
+
+-NTFS Permissions & Sharing
+
+-Remote Desktop Protocol (RDP)
+
 
 Step-by-Step Implementation
 
