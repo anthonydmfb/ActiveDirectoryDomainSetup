@@ -11,7 +11,7 @@ Step-by-Step Chart for Active Directory Demo Project
 • Subnet mask: 255.255.255.0
 • Default gateway: optional 192.168.56.1
 • Preferred DNS: 192.168.56.10 (important that the DNS points to itself)
-![SetStatic](Images/SetStatic.png)
+![SetStatic2](Images/SetStatic2.png)
 4.	Verify network on server
 • To ensure the IP and network settings are correct we run ipconfig /all and ping 192.168.56.10 (loopback check). It’s also important to ensure the client VM is configured on the same network.
 5.	Install AD DS role on server
